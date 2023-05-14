@@ -8,7 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function Edit() {
     const[name,setName]=useState('');
-    const[age,setAge]=useState('');
+    const[blog,setBlog]=useState('');
     const[id,setId]=useState('');
 
     let history=useNavigate();
@@ -27,7 +27,7 @@ function Edit() {
 
     useEffect(()=>{
         setName(localStorage.getItem('Name'))
-        setAge(localStorage.getItem('Age'))
+        setBlog(localStorage.getItem('Blog'))
         setId(localStorage.getItem('Id'))
     },[])
   return (
@@ -39,7 +39,7 @@ function Edit() {
             </Form.Control>
         </Form.Group>
         <Form.Group className='mb-3' controlId='formAge'>
-            <Form.Control type="text" placeholder='Enter Age' value={age} required onChange={(e)=>setAge(e.target.value)}>
+            <Form.Control type="text" placeholder='Enter Age' value={blog} required onChange={(e)=>setBlog(e.target.value)}>
                 
             </Form.Control>
         </Form.Group>
